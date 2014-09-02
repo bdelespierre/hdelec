@@ -1,0 +1,108 @@
+---
+layout: default
+title: HDElec
+---
+<section class="hero">
+	<div class="wrap">
+		<div class="logo">
+			<img src="/public/images/logo.png" alt="logo.png" title="Hervé Delespierre Électricité" class="animated fadeIn">
+		</div>
+		<div class="phone animated fadeIn">
+			<span><i class="fa fa-mobile-phone"></i> 08.36.65.65.65</span>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="9u">
+				<h2><i class="fa fa-check-square-o"></i> Lorem ipsum dolor</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<h2><i class="fa fa-check-square-o"></i> Lorem ipsum dolor</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<h2><i class="fa fa-check-square-o"></i> Lorem ipsum dolor</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="3u">
+				<ul class="menu">
+					<li><a href="/electricite-generale"><i class="fa fa-angle-double-right"></i> Électricité Générale</a></li>
+					<li><a href="/installation"><i class="fa fa-angle-double-right"></i> Installation</a></li>
+					<li><a href="/depanage"><i class="fa fa-angle-double-right"></i> Dépanage</a></li>
+					<li><a href="/devis"><i class="fa fa-angle-double-right"></i> Devis</a></li>
+					<li><a href="/contact"><i class="fa fa-angle-double-right"></i> Contact</a></li>
+				</ul>
+				<img src="http://lorempixel.com/400/400/business/" alt="" class="round">
+			</div>
+		</div>
+	</div>
+</section>
+{% if site.testimonials %}
+<section id="testimonial">
+	{% for testimonial in site.testimonials %}
+	<span data-author="{{ testimonial.author }}">{{ testimonial.text }}</span>
+	{% endfor %}
+	<div class="container">
+		<div class="row">
+			<div class="8u -2u">
+				<blockquote class="animated fadeInLeft">
+					<p></p>
+					<span class="author"></span>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %}
+<section id="invoice">
+	<div class="container">
+		<div class="row">
+			<div class="12u"></div>
+		</div>
+	</div>
+</section>
+<script type="text/javascript">
+$(function() {
+	var  testimonials = [],
+		 current      = 0,
+		$blockquote   = $('#testimonial blockquote'),
+		$text         = $('p', $blockquote),
+		$author       = $('.author', $blockquote);
+
+	$('#testimonial span[data-author]').each(function() {
+		testimonials.push([$(this).attr('data-author'), $(this).text()]);
+	});
+
+	var nextTestimonial = function() {
+		if (current >= testimonials.length)
+			current = 0;
+
+		var testimonial = testimonials[current];
+		current++;
+
+		$('#testimonial blockquote').toggleClass('fadeInLeft fadeOutRight');
+		$author.text(testimonial[0]);
+		$text.text(testimonial[1]);
+		setTimeout(function() { $('#testimonial blockquote').toggleClass('fadeInLeft fadeOutRight'); }, 500);
+	};
+
+	nextTestimonial();
+
+	if (testimonials.length > 1)
+		setInterval(nextTestimonial, 5000);
+});
+</script>

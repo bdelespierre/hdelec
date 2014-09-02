@@ -1,0 +1,84 @@
+name: HDElec
+description:
+url: http://hdelec.fr
+markdown: redcarpet
+pygments: true
+exclude: ['hdelec.sublime-project', 'hdelec.sublime-workspace']
+permalink: /article/:title
+testimonials:
+- author: Bob
+  text: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+- author: Roger
+  text: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+towns:
+- name: Antibes
+  url: /electricien-antibes
+- name: Beausoleil
+  url: /electricien-beausoleil
+- name: Biot
+  url: /electricien-biot
+- name: Cagnes-sur-Mer
+  url: /electricien-cagnes-sur-mer
+- name: Cannes
+  url: /electricien-cannes
+- name: Carros
+  url: /electricien-carros
+- name: Gagnes sur mer
+  url: /electricien-gagnes-sur-mer
+- name: Garbejaire
+  url: /electricien-garbejaire
+- name: Golfe Juan
+  url: /electricien-golfe-juan
+- name: Grasse
+  url: /electricien-grasse
+- name: Juan les pins
+  url: /electricien-juan-les-pins
+- name: La colle sur loup
+  url: /electricien-la-colle-sur-loup
+- name: La Gaude
+  url: /electricien-la-gaude
+- name: La Trinité
+  url: /electricien-la-trinite
+- name: La Turbie
+  url: /electricien-la-turbie
+- name: Le Cannet
+  url: /electricien-le-cannet
+- name: Mandelieu
+  url: /electricien-mandelieu
+- name: Menton
+  url: /electricien-menton
+- name: Monaco
+  url: /electricien-monaco
+- name: Mouans-Sartoux
+  url: /electricien-mouans-sartoux
+- name: Mougins
+  url: /electricien-mougins
+- name: Nice
+  url: /electricien-nice
+- name: Opio
+  url: /electricien-opio
+- name: Peymenade
+  url: /electricien-peymenade
+- name: Plascassier
+  url: /electricien-plascassier
+- name: Roquebrune
+  url: /electricien-roquebrune
+- name: Roquefort les pins
+  url: /electricien-roquefort-les-pins
+- name: Sophia Antipolis
+  url: /electricien-sophia-antipolis
+- name: St Laurent du Var
+  url: /electricien-st-laurent-du-var
+- name: St-Laurent-du-Var
+  url: /electricien-st-laurent-du-var
+- name: Valbonne
+  url: /electricien-valbonne
+- name: Vallauris
+  url: /electricien-vallauris
+- name: Vence
+  url: /electricien-vence
+- name: Villefranche
+  url: /electricien-villefranche
+- name: Villeneuve-Loubet
+  url: /electricien-villeneuve-loubet
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ page.title }}</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<!-- description -->
+	{% if page.description %}
+	<meta name="description" content="{{ page.description }}" />
+	{% else %}
+	<meta name="description" content="{{ site.description }}" />
+	{% endif %}
+
+	<!-- keywords -->
+	{% if page.keywords %}
+	<meta name="keywords" content="{{ page.keywords | join: ',' }}">
+	{% else %}
+	<meta name="keywords" content="{{ site.keywords | join: ',' }}">
+	{% endif %}
+
+	<!-- twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="hdelec">
+	<meta name="twitter:title" content="{{ page.title }}">
+	{% if page.description %}
+	<meta name="twitter:description" content="{{ page.description }}">
+	{% else %}
+	<meta name="twitter:description" content="{{ site.description }}">
+	{% endif %}
+	<meta name="twitter:creator" content="@hdelec">
+	{% if page.image %}
+	<meta name="twitter:image:src" content="{{ page.image }}">
+	{% endif %}
+	<meta name="twitter:domain" content="hdelec.fr">
+
+	<!-- facebook -->
+	<meta property="og:title" content="{{ page.title }}">
+	<meta property="og:type" content="{% if page.type == 'post' %}article{% else %}website{% endif %}">
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+	{% if page.image %}
+	<meta property="og:image" content="{{ page.image }}">
+	{% endif %}
+	{% if page.description %}
+	<meta property="og:description" content="{{ page.description }}">
+	{% else %}
+	<meta property="og:description" content="{{ site.description }}">
+	{% endif %}
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:site_name" content="@bdelespierre">
+	{% if page.type == "article" %}
+	<meta property="og:article:published_time" content="{{ page.date }}">
+	<meta property="og:article:author" content="Benjamin Delespierre">
+	{% if page.category %}
+	<meta property="og:article:section" content="{{ page.category }}">
+	{% endif %}
+	{% for tag in page.tags %}
+	<meta property="og:article:tag" content="{{ tag }}">
+	{% endfor %}
+	{% endif %}
+
+	<!-- RSS - sitemap -->
+	<link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Atom feed for this site">
+	<link href="/sitemap.xml" rel="sitemap" type="application/xml" title="Sitemap">
+
+	<!-- scripts -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery||document.write('<script src="/public/components/jquery/dist/jquery.min.js"><\/script>')</script>
+
+	<!-- styles -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900,400italic">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic">
+	<link rel="stylesheet" href="/public/components/animate.css/animate.min.css" media="screen">
+	<link rel="stylesheet" href="/public/components/CreativeButtons/css/component.css" media="screen">
+	<link rel="stylesheet" href="/public/components/fontawesome/css/font-awesome.min.css">
+	<script src="/public/components/skeljs/dist/skel.min.js">
+	{
+		resetCSS: true,
+		prefix: "/public/css/style",
+		grid: { gutters: 30 },
+		breakpoints: {
+			wide: { range: "1200-", containers: 1140, grid: { gutters: 50 } },
+			narrow: { range: "481-1199", containers: 960 },
+			mobile: { range: "-480", containers: "fluid", lockViewport: true, grid: { collapse: true } }
+		}
+	}
+	</script>
+
+	<!-- fallback styles -->
+	<noscript>
+		<link rel="stylesheet" href="/public/components/skeljs/dist/skel-noscript.css" />
+		<link rel="stylesheet" href="/public/css/style.css" />
+		<link rel="stylesheet" href="/public/css/style-wide.css" />
+	</noscript>
+</head>
+<body>
+	<header class="site">
+		<div class="container">
+			<div class="row">
+				<div class="3u">
+					<h1 class="title"><a href="/"><i class="fa fa-home"></i> Hervé Delespierre Électricité</a></h1>
+				</div>
+				<div class="9u">
+					<ul class="menu">
+						<li class="animated fadeInDown"><a href="/electricite-generale"><i class="fa fa-flash"></i> Électricité Générale</a></li>
+						<li class="animated fadeInDown"><a href="/installation"><i class="fa fa-plug"></i> Installation</a></li>
+						<li class="animated fadeInDown"><a href="/depannage"><i class="fa fa-wrench"></i> Dépannage</a></li>
+						<li class="animated fadeInDown"><a href="/devis"><i class="fa fa-file-text-o"></i> Devis</a></li>
+						<li class="animated fadeInDown"><a href="/contact"><i class="fa fa-envelope-o"></i> Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	{{ content }}
+	<section id="towns">
+		<div class="container">
+			<div class="row not-mobile">
+				{% for town in site.towns %}
+				<span class="3u town"><a href="{{ town.url }}"><i class="fa fa-angle-right"></i> {{ town.name }}</a></span>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	<footer class="site">
+		<div class="container">
+			<div class="row">
+				<div class="12u">
+					&copy; 2014 hdelec.fr - Design <a href="//benjamin.delespierre.pro">Benjamin Delespierre</a> - Logo <a href="//ludovic.delespierre.pro">Ludovic Delespierre</a> - Propulsé par <a href="//jekyllrb.com">Jekyll</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

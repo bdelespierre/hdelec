@@ -1,0 +1,24 @@
+{
+  "name": "hdelec.fr",
+  "version": "1.0.0",
+  "authors": [
+    "Benjamin Delespierre <benjamin.delespierre@gmail.com>"
+  ],
+  "license": "Copyright",
+  "homepage": "http://hdelec.fr",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "CreativeButtons": "codrops/CreativeButtons",
+    "skeljs": "n33/skeljs#~0.4.9",
+    "animate.css": "daneden/animate.css#~3.2.0",
+    "jquery": "~2.1.1",
+    "fontawesome": "~4.2.0"
+  }
+}

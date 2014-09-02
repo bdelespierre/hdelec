@@ -1,0 +1,57 @@
+---
+layout: default
+title: Contact
+---
+<section class="container" id="contact">
+	<div class="row">
+		<div class="12u">
+			<h1>Contact</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="8u">
+			<form action="/contact/send.php">
+				<h2><i class="fa fa-envelope-o"></i> Contactez-moi</h2>
+				<div class="row">
+					<div class="6u">
+						<input type="text" name="name" placeholder="Nom" required>
+					</div>
+					<div class="6u">
+						<input type="text" name="surname" placeholder="Prénom" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="12u">
+						<input type="email" name="email" placeholder="Adresse e-mail" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="12u">
+						<input type="text" name="company" placeholder="Société">
+					</div>
+				</div>
+				<div class="row">
+					<div class="12u">
+						<textarea name="message" id="message" cols="30" rows="10" placeholder="Votre message..." required></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="12u">
+						<input type="submit" value="Envoyer">
+						<input type="reset" value="Reinitialiser">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="4u">
+			<h2><i class="fa fa-map-marker"></i> Coordonnées</h2>
+			<p>
+				Hervé Delespierre<br>
+				1220 av de Pierrefeu<br>
+				06560 Valbonne
+			</p>
+			<hr>
+			<iframe width="100%" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1220%20Avenue%20de%20Pierrefeu%2C%20Valbonne%2C%20France&key=AIzaSyDvdPIBaRU8qlfSWBVTk581ZKKD-WytaKM&zoom=10"></iframe>
+		</div>
+	</div>
+</section>
