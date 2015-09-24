@@ -109,14 +109,17 @@
 						<li class="animated fadeInDown"><a href="/devis"><i class="fa fa-file-text-o"></i> Devis</a></li>
 						<li class="animated fadeInDown"><a href="/contact"><i class="fa fa-envelope-o"></i> Contact</a></li>
 					</ul>
+					<div class="fold-button">
+						<span class="fa fa-chevron-down"></span>
+					</div>
 				</div>
 			</div>
 		</div>
 	</header>
 	{{ content }}
-	<section id="towns">
+	<section id="towns" class="not-mobile">
 		<div class="container">
-			<div class="row not-mobile">
+			<div class="row">
 				{% for town in site.towns %}
 				<span class="3u town"><a href="{{ town.url }}"><i class="fa fa-angle-right"></i> {{ town.name }}</a></span>
 				{% endfor %}
@@ -127,10 +130,18 @@
 		<div class="container">
 			<div class="row">
 				<div class="12u">
-					&copy; 2014 hdelec.fr - Design <a href="//benjamin.delespierre.pro">Benjamin Delespierre</a> - Logo <a href="//ludovic.delespierre.pro">Ludovic Delespierre</a> - Propulsé par <a href="//jekyllrb.com">Jekyll</a>
+					&copy; 2015 hdelec.fr - <a href="//benjamin.delespierre.pro">Design Benjamin Delespierre</a> - <a href="//ludovic.delespierre.pro">Logo Ludovic Delespierre</a> - Propulsé par <a href="//jekyllrb.com">Jekyll</a>
 				</div>
 			</div>
 		</div>
 	</footer>
+	<script type="application/javascript">
+	$(function() {
+		$('header.site .fold-button').click(function() {
+			$('.fa', this).toggleClass('fa-chevron-down fa-chevron-up');
+			$(this).siblings('.menu').toggle(400, 'swing');
+		});
+	});
+	</script>
 </body>
 </html>

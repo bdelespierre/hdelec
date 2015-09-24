@@ -8,7 +8,7 @@ title: HDElec
 			<img src="/public/images/logo.png" alt="logo.png" title="Hervé Delespierre Électricité" class="animated fadeIn">
 		</div>
 		<div class="phone animated fadeIn">
-			<span><i class="fa fa-mobile-phone"></i> 08.36.65.65.65</span>
+			<span><i class="fa fa-mobile-phone"></i> <a href="tel:0836656565">08.36.65.65.65</a></span>
 		</div>
 	</div>
 </section>
@@ -38,7 +38,7 @@ title: HDElec
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
-			<div class="3u">
+			<div class="3u aside">
 				<ul class="menu">
 					<li><a href="/electricite-generale"><i class="fa fa-angle-double-right"></i> Électricité Générale</a></li>
 					<li><a href="/installation"><i class="fa fa-angle-double-right"></i> Installation</a></li>
@@ -52,7 +52,7 @@ title: HDElec
 	</div>
 </section>
 {% if site.testimonials %}
-<section id="testimonial">
+<section id="testimonial" class="not-mobile">
 	{% for testimonial in site.testimonials %}
 	<span data-author="{{ testimonial.author }}">{{ testimonial.text }}</span>
 	{% endfor %}
@@ -68,13 +68,6 @@ title: HDElec
 	</div>
 </section>
 {% endif %}
-<section id="invoice">
-	<div class="container">
-		<div class="row">
-			<div class="12u"></div>
-		</div>
-	</div>
-</section>
 <script type="text/javascript">
 $(function() {
 	var  testimonials = [],
